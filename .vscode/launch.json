@@ -1,0 +1,162 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "SixthExercise",
+            "request": "launch",
+            "mainClass": "exercises_web.SixthExercise",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
+            "name": "FifithExercise",
+            "request": "launch",
+            "mainClass": "exercises_web.FifithExercise",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
+            "name": "FourthExercise",
+            "request": "launch",
+            "mainClass": "exercises_web.FourthExercise",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
+            "name": "ThirdExercise",
+            "request": "launch",
+            "mainClass": "exercises_web.ThirdExercise",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
+            "name": "SecondExercise",
+            "request": "launch",
+            "mainClass": "exercises_web.SecondExercise",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
+            "name": "FirstExercise",
+            "request": "launch",
+            "mainClass": "exercises_web.FirstExercise",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "classroom1.Main",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
+            "name": "atribuition",
+            "request": "launch",
+            "mainClass": "classroom1.atribuition",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
+            "name": "bitwise_operators",
+            "request": "launch",
+            "mainClass": "classroom1.bitwise_operators",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
+            "name": "boolean_table",
+            "request": "launch",
+            "mainClass": "classroom1.boolean_table",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
+            "name": "boolean_test",
+            "request": "launch",
+            "mainClass": "classroom1.boolean_test",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
+            "name": "calculator",
+            "request": "launch",
+            "mainClass": "classroom1.calculator",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
+            "name": "imc_calculator",
+            "request": "launch",
+            "mainClass": "classroom1.imc_calculator",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
+            "name": "square_root",
+            "request": "launch",
+            "mainClass": "classroom1.square_root",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
+            "name": "For",
+            "request": "launch",
+            "mainClass": "classroom2.For",
+            "projectName": "CursoJava_6371348b",
+            "args": "banana uva maçã pera jaca melão melancia"
+        },
+        {
+            "type": "java",
+            "name": "IfElse",
+            "request": "launch",
+            "mainClass": "classroom2.IfElse",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
+            "name": "SwitchCase",
+            "request": "launch",
+            "mainClass": "classroom2.SwitchCase",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
+            "name": "FirstExercise",
+            "request": "launch",
+            "mainClass": "exercises1.FirstExercise",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
+            "name": "FourthExercise",
+            "request": "launch",
+            "mainClass": "exercises1.FourthExercise",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
+            "name": "SecondExercise",
+            "request": "launch",
+            "mainClass": "exercises1.SecondExercise",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
+            "name": "ThirdExercise",
+            "request": "launch",
+            "mainClass": "exercises1.ThirdExercise",
+            "projectName": "CursoJava_6371348b"
+        }
+    ]
+}
