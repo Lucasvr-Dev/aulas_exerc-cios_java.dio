@@ -6,6 +6,49 @@
     "configurations": [
         {
             "type": "java",
+            "name": "EvenOrOdd",
+            "request": "launch",
+            "mainClass": "exercises2.EvenOrOdd",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
+            "name": "ImcCalculator",
+            "request": "launch",
+            "mainClass": "exercises2.ImcCalculator",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
+            "name": "MultiplicationTable",
+            "request": "launch",
+            "mainClass": "exercises2.MultiplicationTable",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
+            "name": "Structures",
+            "request": "launch",
+            "mainClass": "classroom2.Structures",
+            "projectName": "CursoJava_6371348b",
+            "args": "a b c d e f g h i j k l m n"
+        },
+        {
+            "type": "java",
+            "name": "WhileDoWhile",
+            "request": "launch",
+            "mainClass": "classroom2.WhileDoWhile",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
+            "name": "SeventhExercise",
+            "request": "launch",
+            "mainClass": "exercises_web.SeventhExercise",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
             "name": "SixthExercise",
             "request": "launch",
             "mainClass": "exercises_web.SixthExercise",
