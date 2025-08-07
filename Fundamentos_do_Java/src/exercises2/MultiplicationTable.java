@@ -11,9 +11,7 @@ public class MultiplicationTable {
         
         for (var table = 1;table <= 10; table++){
             System.out.printf("|%s x %s = %s \n",number,table,number*table);
-        }    
-
-        
+        }      
     }
 }
 

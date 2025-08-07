@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Numbers",
+            "request": "launch",
+            "mainClass": "exercises2.Numbers",
+            "projectName": "CursoJava_6371348b"
+        },
+        {
+            "type": "java",
             "name": "EvenOrOdd",
             "request": "launch",
             "mainClass": "exercises2.EvenOrOdd",
