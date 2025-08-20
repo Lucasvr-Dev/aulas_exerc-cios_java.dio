@@ -113,7 +113,19 @@ public class BankAccount {
                     this.balance -= this.withdraw;
                     break;
                 }else{
-                    
+                    System.out.println("Você não dispõe desse valor! Deseja usar seu cheque especial? (S/N)");
+                    String decisionWithdraw = scanner.next();
+                    if (decisionWithdraw.equalsIgnoreCase("S")) {
+                    double newWithD = this.withdraw - this.balance;
+                        if (newWithD <= this.specialCheck) {
+                            this.specialCheck -= newWithD;
+                            System.out.println("Saque realizado com sucesso!");
+                            break;
+                        }else{
+                            System.out.println("Seu cheque especial não é suficiente, tente novamente.");
+                            break;
+                        }
+                    }
                 }
             }
         }
