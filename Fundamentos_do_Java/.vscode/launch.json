@@ -4,7 +4,48 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "poo.exercicios_poo.Main",
+            "projectName": "Fundamentos_do_Java_20e43391"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "poo.exemplo_record.Main",
+            "projectName": "Fundamentos_do_Java_20e43391"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "poo.exemplo_n.Main",
+            "projectName": "Fundamentos_do_Java_20e43391"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "poo.Main",
+            "projectName": "Fundamentos_do_Java_20e43391"
+        },
+        {
+            "type": "java",
+            "name": "DescontoInteligente",
+            "request": "launch",
+            "mainClass": "exercises2.DescontoInteligente",
+            "projectName": "Fundamentos_do_Java_20e43391"
+        },
+        {
+            "type": "java",
+            "name": "WageTax",
+            "request": "launch",
+            "mainClass": "exercises2.WageTax",
+            "projectName": "Fundamentos_do_Java_20e43391"
+        },
         {
             "type": "java",
             "name": "Current File",
