@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "main",
+            "request": "launch",
+            "mainClass": "poo.exercise_account.main",
+            "projectName": "Fundamentos_do_Java_20e43391"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "poo.exercicios_poo.Main",
