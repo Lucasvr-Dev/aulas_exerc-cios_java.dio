@@ -40,7 +40,7 @@ public class BankAccount {
             System.out.println("Informe quanto deseja depositar! ");
             this.deposit = scanner.nextDouble();
 
-            if (deposit == 0){
+            if (deposit <= 0){
                 System.out.println("Valor mínimo de R$50! Por favor, tente novamente.");
                 continue;
 
@@ -70,34 +70,44 @@ public class BankAccount {
 
     public void depositMoney(){
             
+        String decisionDep;
+
+        while (true) {
+            
             System.out.println("Quanto você deseja depositar? ");
             this.deposit = scanner.nextDouble();
-            System.out.printf("Você tem certeza de que deseja realizar o depósito no valor de R$%.2f? (S/N)\n",deposit);
-            String decisionDep = scanner.next();
 
-            if (decisionDep.equalsIgnoreCase("S")){
-                if (this.checkTax > 0) {
-                double fee = this.checkTax * 0.20; 
-                double totalDebt = this.checkTax + fee;
+            if (this.deposit <= 0){
+                System.out.println("Valor mínimo de R$1! Por favor, tente novamente.");
+                continue;
+            }else{    
+                System.out.printf("Você tem certeza de que deseja realizar o depósito no valor de R$%.2f? (S/N)\n",deposit);
+                decisionDep = scanner.next();
+                break;
+            }   
+        }     
 
-                if (this.deposit <= totalDebt) {
-                    this.checkTax -= this.deposit;
-                    System.out.printf("Depósito usado para reduzir dívida do cheque especial. Restante R$%2.f\n",this.checkTax);
+            while (decisionDep.equalsIgnoreCase("S")){
+
+                if (this.balance < 0) {
+                    double fee = Math.abs(this.balance) * 0.20; // taxa de 20% sobre a dívida
+                    double totalDebt = Math.abs(this.balance) + fee;
+
+                    if (this.deposit < totalDebt) {
+                        this.balance += this.deposit; // diminui a dívida
+                        this.checkTax = Math.abs(this.balance);
+                        System.out.printf("Depósito usado para reduzir dívida. Saldo atual: R$%.2f\n", this.balance);
+                    } else {
+                        this.balance += this.deposit; 
+                        this.checkTax = 0; // dívida quitada
+                        System.out.printf("Dívida quitada! Saldo atualizado: R$%.2f\n", this.balance);
+                    }
                 } else {
-                    this.deposit -= totalDebt; // paga a dívida + taxa
-                    this.specialCheck += this.checkTax;
-                    this.checkTax = 0;
-                    this.balance += this.deposit; // só o que sobra vai para saldo
-                    System.out.printf("Dívida do cheque especial quitada! Saldo atualizado: R$%.2f\n", this.balance);
+                    this.balance += this.deposit;
+                    System.out.printf("Depósito de R$%.2f realizado com sucesso!\n", deposit);
                 }
-
-            } else {
-                this.balance += this.deposit;
-                System.out.printf("Depósito de R$%.2f realizado com sucesso!\n", deposit);
             }
-        }
-    }    
-        
+        }           
 
     public void withdrawMoney(){
 
@@ -117,8 +127,9 @@ public class BankAccount {
 
             }else{
                 if (withdrawValue <= this.balance){
-                    System.out.println("Saque realizado!");
+
                     this.balance -= withdrawValue;
+                    System.out.println("Saque realizado!");
                     break;
 
                 }else{
@@ -127,17 +138,19 @@ public class BankAccount {
                     String decisionWithdraw = scanner.next();
 
                     if (decisionWithdraw.equalsIgnoreCase("S")) {
-                    double newWithD = withdrawValue -  this.balance;
 
-                        if (newWithD <= this.specialCheck) {
-                            this.specialCheck -= newWithD;
-                            this.checkTax += newWithD;
-                            this.balance = 0;
-                            System.out.println("Saque realizado com sucesso usando cheque especial!");
-                            break;
-                        }else{
-                            System.out.println("Seu cheque especial não é suficiente, tente novamente.");
-                            break;
+                        this.balance -= withdrawValue; // ! saldo pode ficar negativo
+                        this.checkTax = Math.abs(Math.min(this.balance,0));// dívida é o módulo do saldo negativo
+
+                        if (this.checkTax > this.specialCheck) {
+                        System.out.println("Limite do cheque especial excedido!");
+                        this.balance += withdrawValue; // desfaz operação
+                        break;
+
+                    } else {
+                        System.out.println("Saque realizado com sucesso usando cheque especial!");
+                        this.specialCheck -= Math.abs(this.balance);
+                        break;
                         }
                     }
                 }
@@ -153,25 +166,28 @@ public class BankAccount {
         double valueBill = scanner.nextDouble();
 
         if (valueBill <= this.balance) {
-            System.out.println("Pagamento realizado com sucesso!");
+            // precisa de cheque especial
             this.balance -= valueBill;
-
+            System.out.println("Pagamento realizado com sucesso!");    
         }else{
             System.out.println("Você não possui esse valor em conta, deseja usar parte do cheque especial? (S/N)");
             String decisionCheck = scanner.next();
 
             if (decisionCheck.equalsIgnoreCase("S")) {
 
-                double difference = valueBill - this.balance; // quanto falta para pagar
+                double difference = valueBill - this.balance; // quanto falta além do saldo
 
-                if (this.specialCheck >= difference) {
-                    this.specialCheck -= difference;   // desconta do cheque especial
-                    this.checkTax += difference;       // acumula quanto foi usado do cheque especial
-                    this.balance = 0;
+                if (difference <= this.specialCheck) {
+                    // usa saldo + cheque especial
+                    this.balance -= difference ;
+                    this.specialCheck -= difference; 
+                    this.checkTax += difference; // acumula dívida
                     System.out.println("Pagamento realizado com sucesso!");
                 } else {
                     System.out.println("Seu cheque especial não é o suficiente!");
                 }
+            }else{
+                System.out.println("Operação cancelada.");
             }
         }
     }
@@ -182,10 +198,11 @@ public class BankAccount {
         }else{
            System.out.println("Você não está usando seu cheque especial");
         }
-    
-
     }
+    
 }
+
+
 
 
 

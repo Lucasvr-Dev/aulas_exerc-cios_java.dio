@@ -21,7 +21,8 @@ public class main {
         System.out.println("3 - Depositar dinheiro");
         System.out.println("4 - Sacar dinheiro");
         System.out.println("5 - Pagar um boleto");
-        System.out.println("6 - Verificar se a conta está usando cheque especial\n");
+        System.out.println("6 - Verificar se a conta está usando cheque especial");
+        System.out.println("7 - Sair\n");
         System.out.println("====================================================");
         int option = scanner.nextInt();
 
@@ -44,6 +45,10 @@ public class main {
             }
             case 6-> {
                 myAccount.specialCheckInUse();
+            }
+            case 7 ->{
+                System.out.println("Obrigado pela preferência!");
+                return;
             }
             }
 

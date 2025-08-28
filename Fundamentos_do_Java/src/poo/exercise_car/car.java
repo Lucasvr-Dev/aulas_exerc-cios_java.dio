@@ -69,7 +69,7 @@ public class car extends vehicle {
 
     public void createCar(){ //Criando carro
 
-        System.out.println("Insira o ano do seu carro: "); //Inserindo valores aos atributos extendidos 
+        System.out.println("Insira o ano do carro: "); //Inserindo valores aos atributos extendidos 
         ano = scanner.nextInt();
         System.out.println("Insira o modelo do carro: ");
         model = scanner.nextLine();
