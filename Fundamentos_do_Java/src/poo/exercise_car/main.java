@@ -2,11 +2,12 @@ package poo.exercise_car;
 
 import java.util.Scanner;
 
-public class main {
+
+public class Main {
     public static void main(String[] args) {
         
         Scanner scanner = new Scanner(System.in);
-        car myCar = new car();
+        Car myCar = new Car();
         int test;
         
         System.out.println("Criando seu carro...");

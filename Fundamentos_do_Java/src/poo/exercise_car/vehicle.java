@@ -1,11 +1,11 @@
 package poo.exercise_car;
 
-public class vehicle {
+public class Vehicle {
 
     int id,ano;
     String model,marca;
 
-    public void vehicle(){
+    public void Vehicle(){
         
     }
 
@@ -46,3 +46,4 @@ public class vehicle {
 
 
 }
+

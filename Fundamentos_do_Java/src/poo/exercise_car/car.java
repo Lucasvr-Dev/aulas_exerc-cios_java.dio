@@ -2,7 +2,7 @@ package poo.exercise_car;
 
 import java.util.Scanner;
 
-public class car extends vehicle {
+public class Car extends Vehicle {
 
     private int speed,march;
     private boolean turnOnOff,turnLeft,turnRight; //Declarando variáveis que usarei no projeto (atributos)
@@ -10,11 +10,11 @@ public class car extends vehicle {
 
     //Construtores
 
-    public car() {
+    public Car() {
 
     }
 
-    public car(int speed, int march, boolean turnOnOff, boolean turnLeft, boolean turnRight, Scanner scanner) {
+    public Car(int speed, int march, boolean turnOnOff, boolean turnLeft, boolean turnRight, Scanner scanner) {
         this.speed = speed;
         this.march = march;
         this.turnOnOff = turnOnOff;
@@ -286,3 +286,4 @@ public class car extends vehicle {
         }
     }
 }
+
