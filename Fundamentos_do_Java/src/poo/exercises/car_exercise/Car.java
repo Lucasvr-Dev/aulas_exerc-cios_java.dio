@@ -109,7 +109,6 @@ public class Car extends Vehicle {
 
     public void accelerateCar(){ //Acelerando carro
 
-        int maxSpeed;
 
         if (speed > 0 && speed < 20 && march == 1){ //Checa se a velocidade está dentro dos parâmetros (min e max)
 

@@ -8,6 +8,20 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "poo.exercises.car_exercise.Main",
+            "projectName": "Fundamentos_do_Java_20e43391"
+        },
+        {
+            "type": "java",
+            "name": "main",
+            "request": "launch",
+            "mainClass": "poo.exercises.account_exercise.main",
+            "projectName": "Fundamentos_do_Java_20e43391"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "poo.exercise_car.Main",
             "projectName": "Fundamentos_do_Java_20e43391"
         },

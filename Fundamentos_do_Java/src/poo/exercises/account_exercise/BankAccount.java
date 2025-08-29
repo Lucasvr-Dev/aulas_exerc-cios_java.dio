@@ -87,27 +87,31 @@ public class BankAccount {
             }   
         }     
 
-            while (decisionDep.equalsIgnoreCase("S")){
+        if (decisionDep.equalsIgnoreCase("S")){
 
-                if (this.balance < 0) {
-                    double fee = Math.abs(this.balance) * 0.20; // taxa de 20% sobre a dívida
-                    double totalDebt = Math.abs(this.balance) + fee;
+            if (this.balance < 0) {
+                double fee = Math.abs(this.balance) * 0.20; // taxa de 20% sobre a dívida
+                double totalDebt = Math.abs(this.balance) + fee;
 
-                    if (this.deposit < totalDebt) {
-                        this.balance += this.deposit; // diminui a dívida
-                        this.checkTax = Math.abs(this.balance);
-                        System.out.printf("Depósito usado para reduzir dívida. Saldo atual: R$%.2f\n", this.balance);
-                    } else {
-                        this.balance += this.deposit; 
-                        this.checkTax = 0; // dívida quitada
-                        System.out.printf("Dívida quitada! Saldo atualizado: R$%.2f\n", this.balance);
-                    }
+                if (this.deposit < totalDebt) {
+                    this.balance += this.deposit; // diminui a dívida
+                    this.checkTax = Math.abs(this.balance);
+                    System.out.printf("Depósito usado para reduzir dívida. Saldo atual: R$%.2f\n", this.balance);
+                    
                 } else {
-                    this.balance += this.deposit;
+                    this.balance += this.deposit; 
+                    this.checkTax = initialSpecialCheck; // dívida quitada
+                    this.specialCheck = initialSpecialCheck; // restaura cheque especial
                     System.out.printf("Depósito de R$%.2f realizado com sucesso!\n", deposit);
-                }
+                    System.out.printf("Dívida quitada! Saldo atualizado: R$%.2f\n", this.balance);
+                    
+                } 
+            }else if (this.balance >= 0 && this.specialCheck == initialSpecialCheck ) {
+                this.balance += this.deposit;
+                System.out.printf("Depósito de R$%.2f realizado com sucesso!\n", deposit);
             }
-        }           
+        }    
+    }           
 
     public void withdrawMoney(){
 
